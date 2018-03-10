@@ -1,0 +1,33 @@
+<!--pages/index/index.wxml-->
+<view class='container'>
+  <view>
+    <swiper class='swiper' indicator-dots="true" autoplay interval='3000'>
+      <block wx:for='{{images}}' wx:key>
+        <swiper-item>
+          <image src='{{item}}'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <block wx:for='{{news}}' wx:key>
+    <view class='news_item' data-id='{{item.id}}' bindtap='onTap'>
+      <view class='titleHeader'>
+        <image src='{{item.imgurl}}'></image>
+        <text class='title'>{{item.title}}</text>
+        <text class='time'>{{item.time}}</text>
+      </view>
+      <view class='content'>
+        <image src='{{item.newsImageUrl}}' class='contentImg'></image>
+        <view class='contentText'>
+          <text>{{item.content}}</text>
+        </view>
+      </view>
+      <view>
+        <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520617703160&di=95ddc85e2b2c2cdf1f7fe567c54b5345&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F15%2F94%2F98%2F75r58PICzbM_1024.jpg' class='dianZan'></image>
+        <text class='text'>{{item.good}}</text>
+        <image src='https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2002431701,1054498845&fm=27&gp=0.jpg' class='dianZan'></image>
+        <text class='text'>{{item.look}}</text>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,6 @@
+<!--pages/welcome/welcome.wxml-->
+<view class='container'>
+  <image class='img' src='{{imgUrl}}'></image> 
+  <text class='text'>{{name}}</text>
+  <view class='btn' catchtap='tap'>开启小程序之旅</view>
+</view>

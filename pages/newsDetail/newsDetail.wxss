@@ -1,0 +1,51 @@
+/* pages/newsDetail/newsDetail.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.headerImage{
+  width: 750rpx;
+  height: 350rpx;
+}
+.border{
+  border-top: 1px solid #ddd;
+  margin-top: 58rpx;
+}
+.star{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 100%;
+  margin-right: 20rpx;
+}
+.starShare{
+  margin-top: 20rpx;
+  margin-right: 5px;
+  float: right;
+  padding: 10rpx 0 0 20rpx;
+  border-radius: 10rpx;
+}
+.starShareBox{
+  margin-top: -25rpx;
+}
+.auther{
+  vertical-align: middle;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100%;
+}
+.autherText{
+  margin: 0 20rpx;
+}
+.title{
+  padding: 18rpx 15rpx;
+}
+.title text{
+  font-size: 50rpx;
+}
+.auther_text{
+  font-size: 18rpx;
+}
+.contentText{
+  color: #666;
+  text-indent: 48rpx;
+}

@@ -1,0 +1,31 @@
+/* pages/welcome/welcome.wxss */
+page{
+  background-color: antiquewhite;
+}
+.container{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.img{
+  width: 150rpx;
+  height: 150rpx;
+  margin: 300rpx auto 50rpx;
+  border-radius: 100%;
+}
+.text{
+  font-size: 24rpx;
+  color: #999;
+
+}
+.btn{
+  border: 1px teal solid;
+  font-size: 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  width: 300rpx;
+  margin: 350rpx auto 0;
+  border-radius: 5px;
+  color: teal;
+}

@@ -1,0 +1,71 @@
+/* pages/index/index.wxss */
+page{
+  background-color: #eee;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.swiper{
+  width:750rpx;
+  height:380rpx;
+}
+.swiper image{
+  width:750rpx;
+  height:380rpx;
+}
+.news_item{
+  margin-top: 15px;
+  background-color: #fff;
+  padding: 15rpx 20rpx 10rpx;
+  border-radius: 10px;
+}
+.news_item view:first-child{
+  border-bottom: 1px #ddd solid;
+  padding-bottom: 8px;
+}
+.news_item .titleHeader image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100%;
+  vertical-align: middle;
+}
+.title{
+  font-size: 35rpx;
+  color: #777;
+  margin-left: 20rpx;
+  font-weight: bold;
+}
+.time{
+  font-size: 24rpx;
+  color: #888;
+  vertical-align: bottom;
+  margin-left: 20rpx;
+}
+.contentImg{
+  width: 710rpx;
+  height: 300rpx;
+  border-radius: 3px;
+}
+.content .contentText{
+  font-size: 24rpx;
+  width: 100%;
+  line-height: 50rpx;
+  color: #777;
+  text-indent: 24px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.news_item .dianZan{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 100%;
+  margin-left: 20rpx;
+}
+.news_item .text{
+  font-size: 24rpx;
+  color: #666;
+  vertical-align: middle;
+  margin-left: 10rpx
+}

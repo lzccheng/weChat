@@ -1,0 +1,24 @@
+<!--pages/newsDetail/newsDetail.wxml-->
+<view class='container'>
+  <image class='headerImage' src='{{dataBase[id].newsImageUrl}}'></image>
+  <view class='title'>
+    <text>{{dataBase[id].title}}</text>
+  </view>
+  <view>
+    <text class='autherText'>作者：</text>
+    <image class='auther' src='{{dataBase[id].imgurl}}'></image>
+    <text class='auther_text autherText'>创作于：{{dataBase[id].time}}</text>
+  </view>
+  <view class='starShareBox'>
+    <view class='starShare'>
+      <image src='{{isGood?"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520711494019&di=dd74c25a901e3378f23edd55756d3b69&imgtype=0&src=http%3A%2F%2Fm.qqzhi.com%2Fupload%2Fimg_4_1591206645D3633479009_23.jpg":"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3036006989,2227649605&fm=27&gp=0.jpg"}}'
+        class='star' catchtap='onGood'></image>
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520711914983&di=b2843cacd40a67e66c22b285a17cfa0a&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2Fc8177f3e6709c93dcce6cccd943df8dcd10054f0.jpg' class='star'
+        catchtap='onShare'></image>
+    </view>
+    <view class='border'></view>
+  </view>
+  <view class='contentText'>
+    <text>{{dataBase[id].content}}</text>
+  </view>
+</view>
