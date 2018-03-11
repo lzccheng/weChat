@@ -1,4 +1,5 @@
 // pages/movie/movie.js
+var app = getApp();
 Page({
 
   /**
@@ -7,26 +8,45 @@ Page({
   data: {
   
   },
-
+  requestData:function(url,key){
+    var _host = app.globalDate.doubanHost;
+    var _url = _host + url;
+    var _that = this;
+    wx.request({
+      url: _url,
+      header: {
+        "Content-Type": "json"
+      },
+      success: function (res) {
+        var data = res.data;
+        console.log(data)
+        var _json = {};
+        _json[key] = data
+        _that.setData(_json)
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.requestData('/v2/movie/coming_soon','willPlay');
+    this.requestData('/v2/movie/in_theaters', 'Playing');
+    this.requestData('/v2/movie/top250', 'top');
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    console.log(this.data)
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-  
+  onShow: function (res) {
+    console.log(this.data.top,res)
   },
 
   /**

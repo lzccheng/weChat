@@ -1,0 +1,17 @@
+/* pages/movie/template/movie/movie.wxss */
+.contaimer{
+  width: 230rpx;
+  height: 330rpx;
+}
+.img{
+  width: 230rpx;
+  height: 330rpx;
+}
+.nameBoxs{
+  width: 230rpx;
+  text-align: center;
+}
+.name{
+  color: #666;
+  font-size: 24rpx;
+}

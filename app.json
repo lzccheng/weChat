@@ -1,12 +1,13 @@
 {
   "pages":[
-    "pages/welcome/welcome",
+    
     "pages/index/index",
+    "pages/welcome/welcome",
     "pages/newsDetail/newsDetail",
     "pages/movie/movie"
   ],
   "window":{
-    
+    "navigationBarBackgroundColor": "antiquewhite"
   },
   "tabBar":{
     "selectedColor": "blur",

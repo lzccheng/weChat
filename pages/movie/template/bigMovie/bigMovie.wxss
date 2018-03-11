@@ -1,0 +1,32 @@
+/* pages/movie/template/bigMovie/bigMovie.wxss */
+.con{
+  display: flex;
+  flex-direction: column;
+}
+.top{
+  border-bottom: 1px solid teal;
+  margin-bottom: 15rpx;
+}
+.title{
+  margin-left: 15rpx;
+}
+.con .box{
+  width: 230rpx;
+  height: 330rpx;
+  flex-direction: row;
+}
+.con .box view{
+  flex-direction: row;
+}
+.image{
+  width: 35rpx;
+  height: 35rpx;
+  vertical-align: middle;
+}
+.more{
+  float: right;
+  margin-right: 20rpx;
+}
+.more text{
+  color: blue;
+}

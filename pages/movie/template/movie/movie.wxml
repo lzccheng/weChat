@@ -1,0 +1,8 @@
+<!--pages/movie/template/movie/movie.wxml-->
+<view class='container'>
+  <image src='{{src}}' class='img'></image>
+  <view class='nameBoxs'>
+    <text class='name'>{{name}}</text>
+  </view>
+  <view></view>
+</view>

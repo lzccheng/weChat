@@ -1,1 +1,47 @@
 /* pages/movie/movie.wxss */
+page{
+  background-color: #eee;
+}
+.container{
+  
+}
+.con{
+  margin-bottom: 30rpx;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10rpx 5rpx 10rpx;
+}
+.itemBox{
+  display: flex;
+  justify-content: space-around;
+}
+.top{
+  border-bottom: 1px solid teal;
+  margin-bottom: 15rpx;
+}
+.title{
+  margin-left: 15rpx;
+}
+.image{
+  width: 35rpx;
+  height: 35rpx;
+  vertical-align: middle;
+}
+.more{
+  float: right;
+  margin-right: 20rpx;
+}
+.more text{
+  color: blue;
+}
+.img{
+  width: 230rpx;
+  height: 330rpx;
+}
+.movieName{
+  width: 230rpx;
+  text-align: center;
+}
+.item{
+  flex-direction: row;
+}
