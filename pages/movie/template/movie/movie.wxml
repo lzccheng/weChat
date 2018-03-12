@@ -1,8 +1,9 @@
 <!--pages/movie/template/movie/movie.wxml-->
-<view class='container'>
   <image src='{{src}}' class='img'></image>
   <view class='nameBoxs'>
     <text class='name'>{{name}}</text>
   </view>
-  <view></view>
-</view>
+  <view class='movieName'>
+    <image src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1603369572,2139675688&fm=27&gp=0.jpg'></image>
+    <text>{{average}}</text>
+  </view>

@@ -11,6 +11,10 @@ Component({
     name:{
       type:String,
       value:''
+    },
+    average:{
+      type:String,
+      value:''
     }
   },
 

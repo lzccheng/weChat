@@ -1,2 +1,28 @@
 <!--pages/movie/more/more.wxml-->
-<text>{{title}}</text>
+<view class='container'>
+  <view class='search'>
+    <icon type='search' size='15' color='teal'></icon>
+    <input type='text' value='{{inputValue}}' bindblur='onBlur' bindfocus='onFocus'></input>
+    <icon type='cancel' catchtap='onCancel' wx:if='{{cancelIcon}}' size='15' color='red'></icon>
+  </view>
+  <view wx:if='{{isShow}}'>
+    <view>
+      <block wx:for='{{search}}'>
+        <view wx:if='{{item.images.large}}' class='itemBox' bindtap='toDetail' data-id='{{item.id}}'>
+          <Movie src='{{item.images.large}}' name='{{item.title}}' average='{{item.rating.average}}'></Movie>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view wx:if='{{!isShow}}'>
+    <scroll-view scroll-y bindscrolltolower='onScroll' style='height:1330rpx'>
+      <view class='flex'>
+        <block wx:for='{{data.subjects}}'>
+          <view class='itemBox' bindtap='toDetail' data-id='{{item.id}}'>
+            <Movie src='{{item.images.large}}' name='{{item.title}}' average='{{item.rating.average}}'></Movie>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+</view>

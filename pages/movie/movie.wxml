@@ -3,7 +3,7 @@
   <view class='con'>
     <view class='top'>
       <text class='title'>{{willPlay.title}}</text>
-      <view class='more' bindtap='onMore' data-title='{{willPlay.title}}'>
+      <view class='more' bindtap='onMore' data-url='coming_soon' data-title='{{willPlay.title}}'>
         <text>更多</text>
         <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520800294880&di=cd0e140e80aa0d84c2bb505a70122a4e&imgtype=0&src=http%3A%2F%2Fwww.taopic.com%2Fuploads%2Fallimg%2F130516%2F235105-1305160S11512.jpg' class='image'></image>
       </view>
@@ -26,7 +26,7 @@
   <view class='con'>
     <view class='top'>
       <text class='title'>{{Playing.title}}</text>
-      <view class='more' bindtap='onMore' data-title='{{Playing.title}}'>
+      <view class='more' bindtap='onMore' data-url='in_theaters' data-title='{{Playing.title}}'>
         <text>更多</text>
         <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520800294880&di=cd0e140e80aa0d84c2bb505a70122a4e&imgtype=0&src=http%3A%2F%2Fwww.taopic.com%2Fuploads%2Fallimg%2F130516%2F235105-1305160S11512.jpg' class='image'></image>
       </view>
@@ -49,7 +49,7 @@
   <view class='con'>
     <view class='top'>
       <text class='title'>{{top.title}}</text>
-      <view class='more' bindtap='onMore' data-title='{{top.title}}'>
+      <view class='more' bindtap='onMore' data-url='top250' data-title='{{top.title}}'>
         <text>更多</text>
         <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520800294880&di=cd0e140e80aa0d84c2bb505a70122a4e&imgtype=0&src=http%3A%2F%2Fwww.taopic.com%2Fuploads%2Fallimg%2F130516%2F235105-1305160S11512.jpg' class='image'></image>
       </view>

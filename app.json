@@ -9,7 +9,7 @@
     "pages/movie/more/more"
   ],
   "window":{
-   
+    "enablePullDownRefresh": true
   },
   "tabBar":{
     "selectedColor": "blur",

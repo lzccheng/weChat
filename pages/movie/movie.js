@@ -11,10 +11,14 @@ Page({
   onMore:function(event){
     
     var title = event.currentTarget.dataset.title;
-    console.log(title)
+    var url = event.currentTarget.dataset.url;
+    console.log(url)
     wx.navigateTo({
-      url: '/pages/movie/more/more?title=' + title,
+      url: '/pages/movie/more/more?title='+title+'&url='+url,
     })
+  },
+  onPullDownRefresh:function(){
+    console.log(777777777777)
   },
   toDetail:function(event){
     var id = event.currentTarget.dataset.id;
@@ -33,8 +37,8 @@ Page({
       },
       success: function (res) {
         var data = res.data;
+
         var _json = {};
-        console.log(data)
         _json[key] = data
         _that.setData(_json)
       }

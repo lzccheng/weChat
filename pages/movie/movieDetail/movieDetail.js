@@ -17,7 +17,6 @@ Page({
     
     var host = app.globalDate.doubanHost;
     var url = host + '/v2/movie/' + id;
-    console.log(url)
     wx.request({
       url,
       method:'get',
