@@ -2,7 +2,7 @@
 <view class='container'>
   <view class='search'>
     <icon type='search' size='15' color='teal'></icon>
-    <input type='text' value='{{inputValue}}' bindblur='onBlur' bindfocus='onFocus'></input>
+    <input type='text' placeholder='红海行动' value='{{inputValue}}' bindblur='onBlur' bindfocus='onFocus'></input>
     <icon type='cancel' catchtap='onCancel' wx:if='{{cancelIcon}}' size='15' color='red'></icon>
   </view>
   <view wx:if='{{isShow}}'>

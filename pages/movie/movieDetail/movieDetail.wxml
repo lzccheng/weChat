@@ -1,2 +1,8 @@
 <!--pages/movie/movieDetail/movieDetail.wxml-->
-<text>movie-id:{{id}}</text>
+<view>
+  <image class='header_background' mode='aspectFill' src='{{json.imgSrc}}'></image>
+  <view class='header_msg'>
+    <view class='movie_title'><text>{{json.title}}({{json.year}})</text></view>
+    <view><text>{{json.languages}}</text></view>
+  </view>
+</view>

@@ -1,6 +1,5 @@
 // pages/movie/more/more.js
 var app = getApp();
-var num = 0;
 Page({
 
   /**
@@ -10,7 +9,9 @@ Page({
     cancelIcon:false,
     search:[],
     isShow:false,
-    inputValue:''
+    inputValue:'',
+    num:0,
+    count:20
   },
   onFocus:function(event){
     this.setData({ cancelIcon: true, isShow:true})
@@ -21,29 +22,31 @@ Page({
   onBlur:function(event){
     var that = this;
     var inputValue = event.detail.value;
-    console.log(inputValue)
     this.setData({ inputValue})
-    wx.showLoading({
-      title: '数据加载中....'
-    })
-    wx.request({
-      url: app.globalDate.doubanHost + '/v2/movie/search?q=' + inputValue,
-      header:{
-        "Content-Type":"json"
-      },
-      success:function(res){
-        that.setData({search:res.data.subjects})
-        wx.hideLoading();
-      }
-    })
+    if (inputValue){
+      wx.showLoading({
+        title: '数据加载中....'
+      })
+      wx.request({
+        url: app.globalDate.doubanHost + '/v2/movie/search?q=' + inputValue,
+        header: {
+          "Content-Type": "json"
+        },
+        success: function (res) {
+          that.setData({ search: res.data.subjects })
+          wx.hideLoading();
+        }
+      })
+    }
   },
   onPullDownRefresh :function(){
     console.log(888888);
   },
   onScroll:function(){
-    num += 20;
+    this.data.num += 20;
     var that = this;
-    var url = app.globalDate.doubanHost + '/v2/movie/' + this.data.url + '?start='+num+'&count=20';
+    var _count = that.data.data.total - this.data.num >= this.data.count ? this.data.count : that.data.data.total - this.data.num;
+    var url = app.globalDate.doubanHost + '/v2/movie/' + this.data.url + '?start='+this.data.num+'&count='+_count;
     wx.showNavigationBarLoading();
     wx.request({
       url,

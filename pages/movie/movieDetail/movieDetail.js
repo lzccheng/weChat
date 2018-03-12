@@ -14,9 +14,9 @@ Page({
    */
   onLoad: function (options) {
     var id = options.id;
-    
+    var that = this;
     var host = app.globalDate.doubanHost;
-    var url = host + '/v2/movie/' + id;
+    var url = host + '/v2/movie/subject/' + id;
     wx.request({
       url,
       method:'get',
@@ -25,6 +25,23 @@ Page({
       },
       success:function(res){
         console.log(res)
+        var json = {};
+        var data = res.data;
+        var languagesFn = function(arr){
+          let str = ''
+          for(let i=0;i<arr.length;i++){
+            str += arr[i] + ' / ';
+          };
+          return str.slice(0, -3);
+        }
+        json.average = data.rating.average;
+        json.imgSrc = data.images.large;
+        json.title = data.title;
+        json.year = data.year;
+        json.id = data.id;
+        json.pubdate = data.pubdate;
+        json.languages = languagesFn(data.languages);
+        that.setData({data,json})
       }
     })
     this.setData({id})
