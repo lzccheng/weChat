@@ -1,5 +1,6 @@
 {
   "usingComponents":{
     "Movie":"template/bigMovie/bigMovie"
-  }
+  },
+  "navigationBarTitleText": "电影"
 }

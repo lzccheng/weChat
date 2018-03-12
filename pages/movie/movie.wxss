@@ -38,9 +38,17 @@ page{
   width: 230rpx;
   height: 330rpx;
 }
-.movieName{
+.itemBox .item .movieName{
+  margin: 0;
+  padding: 0;
   width: 230rpx;
   text-align: center;
+}
+.movieName image{
+  width: 35rpx;
+  height: 35rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
 }
 .item{
   flex-direction: row;

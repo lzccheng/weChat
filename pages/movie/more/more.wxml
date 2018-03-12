@@ -1,0 +1,2 @@
+<!--pages/movie/more/more.wxml-->
+<text>{{title}}</text>

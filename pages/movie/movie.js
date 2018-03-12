@@ -8,6 +8,20 @@ Page({
   data: {
   
   },
+  onMore:function(event){
+    
+    var title = event.currentTarget.dataset.title;
+    console.log(title)
+    wx.navigateTo({
+      url: '/pages/movie/more/more?title=' + title,
+    })
+  },
+  toDetail:function(event){
+    var id = event.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '/pages/movie/movieDetail/movieDetail?id='+id,
+    })
+  },
   requestData:function(url,key){
     var _host = app.globalDate.doubanHost;
     var _url = _host + url;
@@ -19,8 +33,8 @@ Page({
       },
       success: function (res) {
         var data = res.data;
-        console.log(data)
         var _json = {};
+        console.log(data)
         _json[key] = data
         _that.setData(_json)
       }
@@ -30,23 +44,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.requestData('/v2/movie/coming_soon','willPlay');
-    this.requestData('/v2/movie/in_theaters', 'Playing');
-    this.requestData('/v2/movie/top250', 'top');
+    this.requestData('/v2/movie/coming_soon?start=0&count=3','willPlay');
+    this.requestData('/v2/movie/in_theaters?start=0&count=3', 'Playing');
+    this.requestData('/v2/movie/top250?start=0&count=3', 'top');
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log(this.data)
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function (res) {
-    console.log(this.data.top,res)
   },
 
   /**

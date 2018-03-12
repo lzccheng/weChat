@@ -4,10 +4,12 @@
     "pages/index/index",
     "pages/welcome/welcome",
     "pages/newsDetail/newsDetail",
-    "pages/movie/movie"
+    "pages/movie/movie",
+    "pages/movie/movieDetail/movieDetail",
+    "pages/movie/more/more"
   ],
   "window":{
-    "navigationBarBackgroundColor": "antiquewhite"
+   
   },
   "tabBar":{
     "selectedColor": "blur",

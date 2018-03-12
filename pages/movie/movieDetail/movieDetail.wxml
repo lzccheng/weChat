@@ -1,0 +1,2 @@
+<!--pages/movie/movieDetail/movieDetail.wxml-->
+<text>movie-id:{{id}}</text>
