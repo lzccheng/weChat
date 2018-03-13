@@ -1,8 +1,77 @@
 <!--pages/movie/movieDetail/movieDetail.wxml-->
 <view>
-  <image class='header_background' mode='aspectFill' src='{{json.imgSrc}}'></image>
-  <view class='header_msg'>
-    <view class='movie_title'><text>{{json.title}}({{json.year}})</text></view>
-    <view><text>{{json.languages}}</text></view>
+  <view wx:if='{{err}}' style='text-align:center;'>
+    <text style='color:red;font-size:40rpx;'>数据加载出错！</text>
+  </view>
+  <view wx:if='{{!err}}'>
+    <image class='header_background' mode='aspectFill' src='{{json.imgSrc}}'></image>
+    <view class='header_msg'>
+      <view class='movie_title'>
+        <text>{{json.title}}</text>
+      </view>
+      <view class='movie_countries'>
+        <text>{{json.countries}} / {{json.year}}</text>
+      </view>
+      <view class='movie_directorsStr'>
+        <text>导演：{{json.directorsStr}}</text>
+      </view>
+      <view class='movie_hument'>
+        <text class='hument'>{{json.comments_count}}</text>
+        <text>人评论  /</text>
+        <text class='hument'>{{json.ratings_count}}</text>
+        <text>人评星</text>
+      </view>
+    </view>
+    <image class='movie_image' catchtap='onLook' data-src='{{json.imgSrc}}' src='{{json.imgSrc}}'></image>
+    <view class='text_msg'>
+      <view>类型：
+        <text>{{json.aenres}}</text>
+      </view>
+      <view>语言：
+        <text>{{json.languages}}</text>
+      </view>
+      <view>上映：
+        <text>{{json.pubdate}}</text>
+      </view>
+      <view>评分：
+        <text>{{json.average}}分</text>
+      </view>
+      <view>时长：
+        <text>{{json.durations[0]}}</text>
+      </view>
+      <view>编剧：
+        <text>{{json.writersStr}}</text>
+      </view>
+      <view>演员：
+        <text>{{json.arter}}</text>
+      </view>
+    </view>
+    <view class='line'></view>
+    <view class='summary'>
+      <view class='summary_first'>
+        <text>简介：</text>
+      </view>
+      <view class='summary_secend'>
+        <text> {{json.summary}}</text>
+      </view>
+    </view>
+    <view class='line'></view>
+    <view class='arter_lsit'>
+      <view class='art_title'>
+        <text id='arter'>演员：</text>
+      </view>
+      <view class='arters'>
+        <scroll-view scroll-x style='width:750rpx'>
+          <view id='view'>
+            <block wx:for='{{json.caste}}'>
+              <view class='arter'>
+                <image catchtap='onLook' data-src='{{item.avatars.large}}' src='{{item.avatars.large}}'></image>
+                <text>{{item.name}}</text>
+              </view>
+            </block>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
   </view>
 </view>

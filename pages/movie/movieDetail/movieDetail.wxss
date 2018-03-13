@@ -5,12 +5,14 @@
   height: 350rpx;
   -webkit-filter: blur(10px);
   overflow: hidden;
+  opacity: 0.7;
 }
 
 .header_msg {
   position: absolute;
   top: 0;
   left: 0;
+  height: 350rpx;
 }
 
 .header_msg .movie_title {
@@ -23,4 +25,92 @@
   font-size: 45rpx;
   white-space: normal;
   color:#222;
+}
+.movie_countries{
+  width: 400rpx;
+  text-align: center;
+}
+
+.movie_hument{
+  position: absolute;
+  left: 0;
+  bottom: 10rpx;
+}
+.movie_directorsStr{
+  margin-top: 30rpx;
+  width: 400rpx;
+  text-align: center;
+}
+.movie_directorsStr text{
+  color: blue;
+  font-size: 35rpx;
+}
+.movie_countries{
+  margin-top: 30rpx;
+}
+.movie_countries text{
+  color: blue;
+  font-size: 32rpx;
+}
+.movie_hument text{
+  margin-left: 20rpx; 
+  color: #222;
+}
+.movie_hument .hument{
+  color: red;
+} 
+.movie_image{
+  width: 230rpx;
+  height: 330rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 120rpx;
+}
+.line{
+  border-top: 1px solid #999;
+}
+.text_msg{
+  display: flex;
+  flex-direction: column;
+  margin: 10rpx 0 30rpx 30rpx;
+  padding-top: 10rpx;
+  font-size: 24rpx;
+  color: #777;
+}
+.text_msg view text{
+  margin: 20rpx 0 20rpx 10rpx;
+  color: #777;
+}
+.summary{
+  padding: 10rpx 20rpx;
+}
+.summary view.summary_first text{
+  font-size: 35rpx;
+  font-weight: bold;
+}
+.summary view.summary_secend text{
+  text-indent: 24rpx;
+}
+#arter{
+  padding-left: 20rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+}
+.arter_lsit view.arters{
+  display: flex;
+  flex-direction: row;
+}
+.arter_lsit view.arters #view{
+  display: flex;
+  flex-direction: row;
+  padding: 10rpx 10rpx;
+}
+.arter_lsit view.arters .arter{
+  margin: 0 10rpx;
+  text-align: center;
+  width: 230rpx;
+}
+.arter_lsit view.arters .arter image{
+  width: 230rpx;
+  height: 330rpx;
 }
